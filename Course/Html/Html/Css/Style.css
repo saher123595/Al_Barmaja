@@ -1,0 +1,470 @@
+/* Scroll */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+}
+
+
+/* Scroll */
+
+@import url(https://fonts.googleapis.com/css?family=Alegreya+Sans:700);
+
+/* Main Varibales */
+
+:root {
+    --Color1: rgb(247, 6, 127);
+    --Color2: rgb(0, 119, 255);
+}
+
+::selection {
+    background-color: var(--Color1);
+    color: #FFF;
+}
+
+body {
+    font-family: 'Alegreya Sans', sans-serif;
+    position: relative;
+}
+
+
+/* Starts Desgins Section_One */
+
+.Section_One {
+    height: 100vh;
+    color: var(--Color1) !important;
+    background: linear-gradient(#2e1a35e6, #2e1a35e6), url("../Images/Header.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.Section_One header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 100px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    transition: .4s;
+}
+
+.Section_One header.active {
+    background-color: #fff;
+    padding: 10px 50px;
+}
+
+.Section_One header .logo {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--Color1);
+}
+
+.Section_One header .logo a {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--Color1);
+    text-decoration: none;
+}
+
+.Section_One header nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.Section_One header nav .BtnToogleList {
+    background: var(--Color1);
+    color: #FFF;
+    border: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+}
+
+.Section_One header nav ul li {
+    margin: 0 5px;
+    border-radius: 5px;
+    height: 40px;
+    width: fit-content;
+    padding: 0 20px;
+    transition: .4s;
+}
+
+.Section_One header nav ul li:hover {
+    background-color: var(--Color1);
+    color: #FFF;
+}
+
+.Section_One header nav ul li:last-child {
+    background-color: var(--Color2);
+    border-radius: 5px;
+}
+
+.Section_One header nav ul li:last-child:hover {
+    background-color: #FFF;
+}
+
+.Section_One header nav ul li:last-child a {
+    color: #FFF;
+}
+
+.Section_One header nav ul li:last-child:hover a {
+    color: var(--Color2);
+}
+
+.Section_One header nav ul li a {
+    color: var(--Main_color);
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 500;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Section_One .Welcome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.Section_One .Welcome>div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Section_One .Welcome>div i {
+    font-size: 100px;
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Section_One .Welcome>div>div {
+    margin: 0 20px 0 0;
+    color: #FFF;
+}
+
+.Section_One .Welcome>div h2 {
+    text-align: right;
+    border-bottom: 5px solid var(--Color1);
+    padding: 5px;
+    width: fit-content;
+    margin-left: auto;
+}
+
+.Section_One .Welcome>div p {
+    width: 400px;
+    text-align: right;
+    font-family: sans-serif;
+    font-weight: 600;
+}
+
+
+/* Ends Desgins Section_One */
+
+
+/* Starts Desgins Courses */
+
+#Courses {
+    height: auto;
+    background: linear-gradient(#2e1a35e6, #2e1a35e6), url(../Images/Courses.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 0;
+}
+
+#Courses h2 {
+    text-align: center;
+    margin: 55px 0 0 0;
+    color: var(--Color1);
+    position: relative;
+    z-index: 2;
+}
+
+#Courses h2::before {
+    content: '';
+    background: #FFF;
+    bottom: 0;
+    position: absolute;
+    height: 150%;
+    width: 200%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    clip-path: polygon(10% 0, 100% 0%, 90% 100%, 0% 100%);
+}
+
+#Courses .All_Courses {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px 10px;
+}
+
+#Courses .All_Courses .Course {
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+}
+
+#Courses .All_Courses .Course i {
+    background-color: var(--Color2);
+    color: #FFF;
+    padding: 20px;
+    font-size: 65px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+#Courses .All_Courses .Course div {
+    margin: 20px 0 0 0;
+    text-align: center;
+}
+
+#Courses .All_Courses .Course div a {
+    background-color: var(--Color1);
+    color: #FFF;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin: 10px auto 0 auto;
+    display: block;
+    width: fit-content;
+}
+
+
+/* Ends Desgins Courses */
+
+
+/* Footer */
+
+.footer {
+    width: 100%;
+    background-color: var(--Color1);
+    padding: 20px;
+}
+
+.footer h5 {
+    font-size: 30px;
+    font-weight: 700;
+    color: #FFF;
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.footer ul li {
+    margin: 0 10px;
+}
+
+
+/* Ends Footer */
+
+
+/* starts Watch */
+
+#Watch {
+    height: 100vh;
+    background: linear-gradient(#2e1a35e6, #2e1a35e6), url(../Images/VidoeImages.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 100px 0;
+}
+
+#Watch aside.Left {
+    width: 30%;
+    height: 100%;
+}
+
+#Watch aside.Left h2 {
+    width: 100%;
+    background-color: #FFF;
+    color: var(--Color2);
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+#Watch aside.Left .AllCourse {
+    display: block;
+    overflow: auto;
+    height: 100%;
+    text-align: center;
+}
+
+#Watch aside.Left .AllCourse div {
+    color: #FFF;
+}
+
+#Watch aside.Left .AllCourse div.Other {
+    color: #FFF;
+    overflow: hidden;
+    transition: .5s;
+    background-color: #fff;
+    width: 90%;
+    margin: auto;
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+#Watch aside.Left .AllCourse div h5 {
+    width: 90%;
+    height: 50px;
+    border-radius: 5px;
+    background-color: var(--Color2);
+    margin: 20px auto 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#Watch aside.Left .AllCourse button {
+    width: 90%;
+    height: 60px;
+    margin: 5px 0;
+    border-radius: 5px;
+    background-color: var(--Color1);
+    color: #FFF;
+    font-size: 20px;
+    transition: .4s;
+}
+
+#Watch aside.Right {
+    width: 65%;
+    height: 100%;
+}
+
+#Watch aside.Right video {
+    width: 100%;
+}
+
+
+/* ends Watch */
+
+
+/* responsive */
+
+@media (max-width:700px) {
+    .Section_One .Welcome>div {
+        flex-direction: column-reverse;
+        margin: 0 !important;
+    }
+    .Section_One .Welcome>div h2 {
+        margin: 20px auto;
+    }
+    .Section_One .Welcome>div a {
+        text-align: center !important;
+    }
+    .Section_One .Welcome>div p {
+        text-align: center;
+    }
+    .Section_One .Welcome>div>div {
+        margin: 0;
+    }
+    .Section_One header nav ul {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        transition: .5s;
+    }
+    .Section_One header nav ul.active {
+        background-color: #000;
+        z-index: 1000;
+        left: 0;
+    }
+    .Section_One header nav ul li {
+        margin: 5px 0;
+    }
+    .Section_One header nav .BtnToogleList {
+        background: var(--Color1);
+        color: #FFF;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 2px;
+        border: 0;
+        font-size: 25px;
+        width: 40px;
+        height: 40px;
+        overflow: visible;
+        position: relative;
+        z-index: 300000;
+    }
+}
+
+@media (max-width:400px) {
+    .Section_One header {
+        padding: 10px;
+    }
+    .Section_One .Welcome>div p {
+        width: 100%;
+    }
+}
+
+width: 100%;
+
+}
+
+}
